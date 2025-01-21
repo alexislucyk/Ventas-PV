@@ -1,16 +1,13 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Dev\\ventas\\Ventas-PV\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|c:\\dev\\ventas\\ventas-pv\\ventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-=======
-  "WorkspaceRootPath": "C:\\Dev\\Ventas-PV\\",
-  "Documents": [
+      "AbsoluteMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|c:\\dev\\ventas\\ventas-pv\\ventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|solutionrelative:ventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
     {
-      "AbsoluteMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|c:\\dev\\ventas-pv\\ventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
->>>>>>> dbed250fde980cf3f25ff0a3576d7bb7d04a71ee
+      "AbsoluteMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|c:\\dev\\ventas\\ventas-pv\\ventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|solutionrelative:ventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
@@ -21,16 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -43,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ventas.vb",
+              "DocumentMoniker": "C:\\Dev\\ventas\\Ventas-PV\\ventas.vb",
+              "RelativeDocumentMoniker": "ventas.vb",
+              "ToolTip": "C:\\Dev\\ventas\\Ventas-PV\\ventas.vb",
+              "RelativeToolTip": "ventas.vb",
+              "ViewState": "AgIAABMAAAAAAAAAAIA1wBQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-21T02:18:43.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ventas.vb [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Dev\\ventas\\Ventas-PV\\ventas.vb",
               "RelativeDocumentMoniker": "ventas.vb",
@@ -50,20 +55,6 @@
               "RelativeToolTip": "ventas.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-01-21T01:26:35.031Z",
-=======
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ventas.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Dev\\Ventas-PV\\ventas.vb",
-              "RelativeDocumentMoniker": "ventas.vb",
-              "ToolTip": "C:\\Dev\\Ventas-PV\\ventas.vb [Dise\u00F1o]",
-              "RelativeToolTip": "ventas.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-21T01:22:04.348Z",
->>>>>>> dbed250fde980cf3f25ff0a3576d7bb7d04a71ee
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\Ventas-PV\\Ventas-PV.vbproj": {}
+    "C:\\Dev\\ventas\\Ventas-PV\\Ventas-PV.vbproj": {}
   },
   "projects": {
-    "C:\\Dev\\Ventas-PV\\Ventas-PV.vbproj": {
+    "C:\\Dev\\ventas\\Ventas-PV\\Ventas-PV.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\Ventas-PV\\Ventas-PV.vbproj",
+        "projectUniqueName": "C:\\Dev\\ventas\\Ventas-PV\\Ventas-PV.vbproj",
         "projectName": "Ventas-PV",
-        "projectPath": "C:\\Dev\\Ventas-PV\\Ventas-PV.vbproj",
-        "packagesPath": "C:\\Users\\Alexis\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\Ventas-PV\\obj\\",
+        "projectPath": "C:\\Dev\\ventas\\Ventas-PV\\Ventas-PV.vbproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\ventas\\Ventas-PV\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alexis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
