@@ -455,7 +455,7 @@ Partial Class ventas
         Controls.Add(Button3)
         Name = "ventas"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Venta"
+        Text = "Factura"
         CType(TablaDetalle, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
