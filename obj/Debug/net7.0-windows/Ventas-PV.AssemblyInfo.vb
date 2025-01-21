@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Ventas-PV"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ebbb9cfb73b2393665849e31ccf3d7b3e075d37"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eefc706659fa69355d1a419418bfe312d0cb9db3"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Ventas-PV"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Ventas-PV"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

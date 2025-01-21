@@ -377,9 +377,9 @@ Partial Class ventas
         Button1.ImageList = ImageList1
         Button1.Location = New Point(186, 9)
         Button1.Name = "Button1"
-        Button1.Size = New Size(49, 23)
+        Button1.Size = New Size(61, 23)
         Button1.TabIndex = 27
-        Button1.Text = "Buscar"
+        Button1.Text = "Buscar cli"
         Button1.TextImageRelation = TextImageRelation.ImageAboveText
         Button1.UseVisualStyleBackColor = True
         ' 
