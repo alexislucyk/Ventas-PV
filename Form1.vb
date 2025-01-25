@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 Imports MySql.Data.Types
 Public Class Form1
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
@@ -49,4 +50,6 @@ Public Class Form1
         compras.MdiParent = Me
         compras.Show()
     End Sub
+
+
 End Class

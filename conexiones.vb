@@ -32,10 +32,13 @@ Module conexiones
     Public Mostrar As Double
     Public TotalCompra As Double
     Public TotalVenta As Double
-
+    Public IP_SERVER As String
 
     Public Sub ConectarDB()
-        Conexion = New MySqlConnection("datasource=localhost;user id=root;password=;database=ventas;Allow Zero Datetime=False;Convert Zero Datetime=True")
+        Dim fileReader As String
+        fileReader = My.Computer.FileSystem.ReadAllText("C:\RS_Sistemas\ip_server.txt")
+        IP_SERVER = fileReader
+        Conexion = New MySqlConnection("datasource='" & IP_SERVER & "';user id=usuario;password=isidoro9;database=ventas;Allow Zero Datetime=False;Convert Zero Datetime=True")
         Conexion.Open()
     End Sub
     Public Sub DesconectarDB()

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Dev\\ventas\\Ventas-PV\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|c:\\dev\\ventas\\ventas-pv\\ventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|solutionrelative:ventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|c:\\dev\\ventas\\ventas-pv\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|c:\\dev\\ventas\\ventas-pv\\ventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|solutionrelative:ventas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|c:\\dev\\ventas\\ventas-pv\\abm_productos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|solutionrelative:abm_productos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|c:\\dev\\ventas\\ventas-pv\\abm_productos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{78BF55FB-984A-469A-BB8B-C52222242397}|Ventas-PV.vbproj|solutionrelative:abm_productos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,26 +39,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ventas.vb",
-              "DocumentMoniker": "C:\\Dev\\ventas\\Ventas-PV\\ventas.vb",
-              "RelativeDocumentMoniker": "ventas.vb",
-              "ToolTip": "C:\\Dev\\ventas\\Ventas-PV\\ventas.vb",
-              "RelativeToolTip": "ventas.vb",
-              "ViewState": "AgIAABMAAAAAAAAAAIA1wBQAAAAIAAAAAAAAAA==",
+              "Title": "Form1.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Dev\\ventas\\Ventas-PV\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Dev\\ventas\\Ventas-PV\\Form1.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-21T02:18:43.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T01:20:35.174Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ventas.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Dev\\ventas\\Ventas-PV\\ventas.vb",
-              "RelativeDocumentMoniker": "ventas.vb",
-              "ToolTip": "C:\\Dev\\ventas\\Ventas-PV\\ventas.vb [Dise\u00F1o]",
-              "RelativeToolTip": "ventas.vb [Dise\u00F1o]",
+              "Title": "abm_productos.vb",
+              "DocumentMoniker": "C:\\Dev\\ventas\\Ventas-PV\\abm_productos.vb",
+              "RelativeDocumentMoniker": "abm_productos.vb",
+              "ToolTip": "C:\\Dev\\ventas\\Ventas-PV\\abm_productos.vb",
+              "RelativeToolTip": "abm_productos.vb",
+              "ViewState": "AgIAACIAAAAAAAAAAAAWwCsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-21T01:26:35.031Z",
+              "WhenOpened": "2025-01-25T01:09:40.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "abm_productos.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Dev\\ventas\\Ventas-PV\\abm_productos.vb",
+              "RelativeDocumentMoniker": "abm_productos.vb",
+              "ToolTip": "C:\\Dev\\ventas\\Ventas-PV\\abm_productos.vb [Dise\u00F1o]",
+              "RelativeToolTip": "abm_productos.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-25T01:09:37.789Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

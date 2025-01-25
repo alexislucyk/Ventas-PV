@@ -98,6 +98,7 @@ Public Class abm_productos
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Limpiar()
+        EstadoRegistro = 0
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -135,6 +136,7 @@ Public Class abm_productos
                 Comando.Parameters.AddWithValue("@proveedor", ComboProveedores.Text)
                 Comando.ExecuteNonQuery()
                 Limpiar()
+                'EstadoRegistro = 1
             ElseIf EstadoRegistro = 1 Then
                 Actualizar = "UPDATE productos SET descripcion='" & UCase(txDescripcion.Text) &
                     "',p_compra='" & Replace(txPrecioCompra.Text, ",", ".") & "',p_venta='" & Replace(txPrecioVenta.Text, ",", ".") & "',stock='" & txStock.Text & "',fecha_ult_compra='" & FECHA &
@@ -142,6 +144,7 @@ Public Class abm_productos
                 Comando = New MySqlCommand(Actualizar, Conexion)
                 Comando.ExecuteNonQuery()
                 Limpiar()
+                EstadoRegistro = 1
             End If
         Catch ex As Exception
             MsgBox(ex.Message)

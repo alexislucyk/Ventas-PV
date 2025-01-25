@@ -153,19 +153,19 @@ Partial Class Form1
         ' 
         ConfiguracionesToolStripMenuItem.Image = CType(resources.GetObject("ConfiguracionesToolStripMenuItem.Image"), Image)
         ConfiguracionesToolStripMenuItem.Name = "ConfiguracionesToolStripMenuItem"
-        ConfiguracionesToolStripMenuItem.Size = New Size(180, 22)
+        ConfiguracionesToolStripMenuItem.Size = New Size(161, 22)
         ConfiguracionesToolStripMenuItem.Text = "Configuraciones"
         ' 
         ' ToolStripMenuItem1
         ' 
         ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        ToolStripMenuItem1.Size = New Size(177, 6)
+        ToolStripMenuItem1.Size = New Size(158, 6)
         ' 
         ' SalirToolStripMenuItem
         ' 
         SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), Image)
         SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        SalirToolStripMenuItem.Size = New Size(180, 22)
+        SalirToolStripMenuItem.Size = New Size(161, 22)
         SalirToolStripMenuItem.Text = "Salir"
         ' 
         ' OperacionesToolStripMenuItem
@@ -179,7 +179,7 @@ Partial Class Form1
         ' 
         ClientesToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {IngresarNuevoClienteToolStripMenuItem, ConsultaDeClientesToolStripMenuItem, ConsultaDeCtaCteClientesToolStripMenuItem})
         ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        ClientesToolStripMenuItem.Size = New Size(180, 22)
+        ClientesToolStripMenuItem.Size = New Size(139, 22)
         ClientesToolStripMenuItem.Text = "Clientes"
         ' 
         ' IngresarNuevoClienteToolStripMenuItem
@@ -204,7 +204,7 @@ Partial Class Form1
         ' 
         ProveedoresToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {IngresarNuevoProveedorToolStripMenuItem, ConsultaDeProveedoresToolStripMenuItem})
         ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        ProveedoresToolStripMenuItem.Size = New Size(180, 22)
+        ProveedoresToolStripMenuItem.Size = New Size(139, 22)
         ProveedoresToolStripMenuItem.Text = "Proveedores"
         ' 
         ' IngresarNuevoProveedorToolStripMenuItem
@@ -223,7 +223,7 @@ Partial Class Form1
         ' 
         ComprasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {IngresoDeMercaderíaToolStripMenuItem, ConsultaDeIngresosToolStripMenuItem})
         ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
-        ComprasToolStripMenuItem.Size = New Size(180, 22)
+        ComprasToolStripMenuItem.Size = New Size(139, 22)
         ComprasToolStripMenuItem.Text = "Compras"
         ' 
         ' IngresoDeMercaderíaToolStripMenuItem
@@ -242,26 +242,26 @@ Partial Class Form1
         ' 
         VentasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {NuevaVentaToolStripMenuItem, ConsultaDeVentasToolStripMenuItem})
         VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        VentasToolStripMenuItem.Size = New Size(180, 22)
+        VentasToolStripMenuItem.Size = New Size(139, 22)
         VentasToolStripMenuItem.Text = "Ventas"
         ' 
         ' NuevaVentaToolStripMenuItem
         ' 
         NuevaVentaToolStripMenuItem.Name = "NuevaVentaToolStripMenuItem"
-        NuevaVentaToolStripMenuItem.Size = New Size(180, 22)
+        NuevaVentaToolStripMenuItem.Size = New Size(174, 22)
         NuevaVentaToolStripMenuItem.Text = "Nueva venta"
         ' 
         ' ConsultaDeVentasToolStripMenuItem
         ' 
         ConsultaDeVentasToolStripMenuItem.Name = "ConsultaDeVentasToolStripMenuItem"
-        ConsultaDeVentasToolStripMenuItem.Size = New Size(180, 22)
+        ConsultaDeVentasToolStripMenuItem.Size = New Size(174, 22)
         ConsultaDeVentasToolStripMenuItem.Text = "Consulta de ventas"
         ' 
         ' ProductosToolStripMenuItem
         ' 
         ProductosToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ABMProductosToolStripMenuItem, ABMRubrosDeProductosToolStripMenuItem})
         ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        ProductosToolStripMenuItem.Size = New Size(180, 22)
+        ProductosToolStripMenuItem.Size = New Size(139, 22)
         ProductosToolStripMenuItem.Text = "Productos"
         ' 
         ' ABMProductosToolStripMenuItem
