@@ -18,6 +18,7 @@ Public Class ventas
     End Sub
 
     Private Sub ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DesconectarDB()
         ConectarDB()
         Fecha_Operacion = DateTime.Now.ToString("dd/MM/yyyy")
         AdapArticFact = New MySqlDataAdapter("SELECT * FROM productos ORDER BY descripcion", Conexion)
@@ -131,6 +132,7 @@ Public Class ventas
 
     End Sub
     Private Sub Totalizar()
+        'Suma todos los items de la factura
         Dim Total As Double = 0
         Dim Mostrar As Double = 0
         Dim Filita As DataGridViewRow = New DataGridViewRow()
@@ -143,6 +145,7 @@ Public Class ventas
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        'Borra item seleccionado del detalle
         Dim I As Integer
         I = TablaDetalle.CurrentRow.Index
         TablaDetalle.Rows.RemoveAt(I)
@@ -151,41 +154,50 @@ Public Class ventas
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         If ComboConPago.Text = "CONTADO" Then
+            ConectarDB()
             GuardaContado()
+            DesconectarDB()
         ElseIf ComboConPago.Text = "CUENTA CORRIENTE" Then
-            'ComboConPago()
+            ConectarDB()
+            GuardaContado()
             GuardaCtaCte()
+            DesconectarDB()
         End If
+        RegenerarFormulario()
     End Sub
 
     Private Sub GuardaContado()
-        Dim GuardaF As MySqlCommand = New MySqlCommand("INSERT INTO ventas(id_cliente,cond_pago,n_documento,total_venta,fecha_venta)" &
+        Try
+            Dim GuardaF As MySqlCommand = New MySqlCommand("INSERT INTO ventas(id_cliente,cond_pago,n_documento,total_venta,fecha_venta)" &
                                                        "VALUES(@id_cliente,@cond_pago,@n_documento,@total_venta,@fecha_venta)", Conexion)
-        GuardaF.Parameters.Clear()
-        GuardaF.Parameters.AddWithValue("@id_cliente", txCodigo.Text)
-        GuardaF.Parameters.AddWithValue("@cond_pago", ComboConPago.Text)
-        GuardaF.Parameters.AddWithValue("@n_documento", txNFact.Text)
-        GuardaF.Parameters.AddWithValue("@total_venta", TotalVenta)
-        GuardaF.Parameters.AddWithValue("@fecha_venta", Date.Now)
-        GuardaF.ExecuteNonQuery()
-        '------------------- Control de Stock --------------------------------------------------------------------------------------
+            GuardaF.Parameters.Clear()
+            GuardaF.Parameters.AddWithValue("@id_cliente", txCodigo.Text)
+            GuardaF.Parameters.AddWithValue("@cond_pago", ComboConPago.Text)
+            GuardaF.Parameters.AddWithValue("@n_documento", txNFact.Text)
+            GuardaF.Parameters.AddWithValue("@total_venta", TotalVenta)
+            GuardaF.Parameters.AddWithValue("@fecha_venta", Date.Now)
+            GuardaF.ExecuteNonQuery()
+            '------------------- Control de Stock --------------------------------------------------------------------------------------
 
-        Dim Filas1 As DataGridViewRow = New DataGridViewRow
-        For Each Filas1 In TablaDetalle.Rows
-            If Filas1.IsNewRow Then
-                Exit For
-            Else
-                Dim StCan As String = Format(CDbl(Filas1.Cells(2).Value), "0.00")
-                StCan = StCan.Replace(",", ".")
-                Dim StCod As String = Filas1.Cells(0).Value
-                'Dim DesStock As String = "UPDATE artic Set stock = stock - " & StCan & " WHERE codigo= " & StCod
-                Dim DesStock As String = "UPDATE productos Set stock = stock - " & StCan & " WHERE cod_prod= '" & StCod & "'"
-                Dim STK As MySqlCommand = New MySqlCommand(DesStock, Conexion)
-                STK.ExecuteNonQuery()
-            End If
-        Next
-        '-------------------- Fin de Control de Stock -------------------------------------------------------------------------------
-        GuardaDetalle()
+            Dim Filas1 As DataGridViewRow = New DataGridViewRow
+            For Each Filas1 In TablaDetalle.Rows
+                If Filas1.IsNewRow Then
+                    Exit For
+                Else
+                    Dim StCan As String = Format(CDbl(Filas1.Cells(2).Value), "0.00")
+                    StCan = StCan.Replace(",", ".")
+                    Dim StCod As String = Filas1.Cells(0).Value
+                    'Dim DesStock As String = "UPDATE artic Set stock = stock - " & StCan & " WHERE codigo= " & StCod
+                    Dim DesStock As String = "UPDATE productos Set stock = stock - " & StCan & " WHERE cod_prod= '" & StCod & "'"
+                    Dim STK As MySqlCommand = New MySqlCommand(DesStock, Conexion)
+                    STK.ExecuteNonQuery()
+                End If
+            Next
+            '-------------------- Fin de Control de Stock -------------------------------------------------------------------------------
+            GuardaDetalle()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
     Private Sub GuardaDetalle()
         Dim Ctdo As MySqlCommand = New MySqlCommand("INSERT INTO ventas_detalle(cod_prod,descripcion,cant,p_unit,total,n_documento,fecha)" &
@@ -213,6 +225,32 @@ Public Class ventas
         End Try
     End Sub
     Private Sub GuardaCtaCte()
+        Try
+            Dim RgtCC As MySqlCommand = New MySqlCommand("INSERT INTO ctacte(id_cliente,movimiento,n_documento,debe,haber,fecha)" &
+                                                           "VALUES(@id_cliente, @movimiento, @n_documento, @debe, @haber, @fecha)", Conexion)
+            RgtCC.Parameters.Clear()
+            RgtCC.Parameters.AddWithValue("@id_cliente", txCodigo.Text)
+            RgtCC.Parameters.AddWithValue("@movimiento", "FACTURA")
+            RgtCC.Parameters.AddWithValue("@n_documento", txNFact.Text)
+            RgtCC.Parameters.AddWithValue("@debe", (txTotalFact.Text * -1))
+            RgtCC.Parameters.AddWithValue("@haber", 0)
+            RgtCC.Parameters.AddWithValue("@fecha", Date.Now)
+            RgtCC.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
+    End Sub
+    Private Sub RegenerarFormulario()
+        Me.Close()
+        Dim nuevoFormulario As New ventas()
+        nuevoFormulario.Show()
+        ConectarDB()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        EstadoRegistro = "Buscar Producto"
+        consulta_precios.ShowDialog()
+        txCodProd.Focus()
     End Sub
 End Class

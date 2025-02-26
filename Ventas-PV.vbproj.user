@@ -19,6 +19,9 @@
     <Compile Update="consulta_compras.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="consulta_ctacte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="consulta_precios.vb">
       <SubType>Form</SubType>
     </Compile>

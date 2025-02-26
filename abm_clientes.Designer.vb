@@ -24,6 +24,8 @@ Partial Class abm_clientes
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(abm_clientes))
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         txCodigo = New TextBox()
         Label1 = New Label()
         txApellido = New TextBox()
@@ -42,13 +44,25 @@ Partial Class abm_clientes
         Button5 = New Button()
         Button4 = New Button()
         Button3 = New Button()
-        Button1 = New Button()
         chkHabilitaCta = New CheckBox()
+        ComboRelacion = New ComboBox()
+        Label8 = New Label()
+        GridClientes = New DataGridView()
+        Column1 = New DataGridViewTextBoxColumn()
+        Column2 = New DataGridViewTextBoxColumn()
+        Column3 = New DataGridViewTextBoxColumn()
+        Column4 = New DataGridViewTextBoxColumn()
+        Column5 = New DataGridViewTextBoxColumn()
+        Column6 = New DataGridViewTextBoxColumn()
+        Column7 = New DataGridViewTextBoxColumn()
+        Column8 = New DataGridViewTextBoxColumn()
+        Column9 = New DataGridViewTextBoxColumn()
+        CType(GridClientes, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' txCodigo
         ' 
-        txCodigo.Location = New Point(91, 33)
+        txCodigo.Location = New Point(62, 16)
         txCodigo.Name = "txCodigo"
         txCodigo.Size = New Size(105, 23)
         txCodigo.TabIndex = 0
@@ -56,7 +70,7 @@ Partial Class abm_clientes
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(28, 36)
+        Label1.Location = New Point(10, 24)
         Label1.Name = "Label1"
         Label1.Size = New Size(46, 15)
         Label1.TabIndex = 3
@@ -64,7 +78,7 @@ Partial Class abm_clientes
         ' 
         ' txApellido
         ' 
-        txApellido.Location = New Point(91, 71)
+        txApellido.Location = New Point(62, 45)
         txApellido.Name = "txApellido"
         txApellido.Size = New Size(305, 23)
         txApellido.TabIndex = 1
@@ -72,7 +86,7 @@ Partial Class abm_clientes
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(28, 74)
+        Label2.Location = New Point(5, 53)
         Label2.Name = "Label2"
         Label2.Size = New Size(51, 15)
         Label2.TabIndex = 5
@@ -80,7 +94,7 @@ Partial Class abm_clientes
         ' 
         ' txNombre
         ' 
-        txNombre.Location = New Point(91, 110)
+        txNombre.Location = New Point(62, 74)
         txNombre.Name = "txNombre"
         txNombre.Size = New Size(305, 23)
         txNombre.TabIndex = 2
@@ -88,7 +102,7 @@ Partial Class abm_clientes
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(28, 113)
+        Label3.Location = New Point(5, 82)
         Label3.Name = "Label3"
         Label3.Size = New Size(51, 15)
         Label3.TabIndex = 7
@@ -96,7 +110,7 @@ Partial Class abm_clientes
         ' 
         ' txDireccion
         ' 
-        txDireccion.Location = New Point(91, 191)
+        txDireccion.Location = New Point(439, 39)
         txDireccion.Multiline = True
         txDireccion.Name = "txDireccion"
         txDireccion.Size = New Size(305, 58)
@@ -105,7 +119,7 @@ Partial Class abm_clientes
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(28, 194)
+        Label4.Location = New Point(376, 42)
         Label4.Name = "Label4"
         Label4.Size = New Size(57, 15)
         Label4.TabIndex = 9
@@ -113,7 +127,7 @@ Partial Class abm_clientes
         ' 
         ' txCuit
         ' 
-        txCuit.Location = New Point(91, 152)
+        txCuit.Location = New Point(62, 103)
         txCuit.Name = "txCuit"
         txCuit.Size = New Size(178, 23)
         txCuit.TabIndex = 3
@@ -121,7 +135,7 @@ Partial Class abm_clientes
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(28, 155)
+        Label5.Location = New Point(27, 111)
         Label5.Name = "Label5"
         Label5.Size = New Size(29, 15)
         Label5.TabIndex = 11
@@ -129,7 +143,7 @@ Partial Class abm_clientes
         ' 
         ' txTelefono
         ' 
-        txTelefono.Location = New Point(90, 267)
+        txTelefono.Location = New Point(315, 103)
         txTelefono.Name = "txTelefono"
         txTelefono.Size = New Size(179, 23)
         txTelefono.TabIndex = 5
@@ -137,7 +151,7 @@ Partial Class abm_clientes
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(27, 270)
+        Label6.Location = New Point(261, 111)
         Label6.Name = "Label6"
         Label6.Size = New Size(52, 15)
         Label6.TabIndex = 13
@@ -146,7 +160,7 @@ Partial Class abm_clientes
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(27, 310)
+        Label7.Location = New Point(14, 140)
         Label7.Name = "Label7"
         Label7.Size = New Size(42, 15)
         Label7.TabIndex = 15
@@ -156,7 +170,7 @@ Partial Class abm_clientes
         ' 
         ComboEstado.FormattingEnabled = True
         ComboEstado.Items.AddRange(New Object() {"ACTIVO", "INACTIVO"})
-        ComboEstado.Location = New Point(90, 310)
+        ComboEstado.Location = New Point(62, 132)
         ComboEstado.Name = "ComboEstado"
         ComboEstado.Size = New Size(179, 23)
         ComboEstado.TabIndex = 6
@@ -195,7 +209,7 @@ Partial Class abm_clientes
         Button5.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
         Button5.ImageKey = "nuevo_reg.png"
         Button5.ImageList = ImageList1
-        Button5.Location = New Point(147, 358)
+        Button5.Location = New Point(495, 415)
         Button5.Name = "Button5"
         Button5.Size = New Size(79, 66)
         Button5.TabIndex = 8
@@ -209,7 +223,7 @@ Partial Class abm_clientes
         Button4.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
         Button4.ImageKey = "Salir.png"
         Button4.ImageList = ImageList1
-        Button4.Location = New Point(317, 358)
+        Button4.Location = New Point(665, 415)
         Button4.Name = "Button4"
         Button4.Size = New Size(79, 66)
         Button4.TabIndex = 10
@@ -223,7 +237,7 @@ Partial Class abm_clientes
         Button3.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
         Button3.ImageKey = "guardar.png"
         Button3.ImageList = ImageList1
-        Button3.Location = New Point(232, 358)
+        Button3.Location = New Point(580, 415)
         Button3.Name = "Button3"
         Button3.Size = New Size(79, 66)
         Button3.TabIndex = 9
@@ -232,37 +246,130 @@ Partial Class abm_clientes
         Button3.TextImageRelation = TextImageRelation.ImageAboveText
         Button3.UseVisualStyleBackColor = True
         ' 
-        ' Button1
-        ' 
-        Button1.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.ImageKey = "buscar.png"
-        Button1.ImageList = ImageList1
-        Button1.Location = New Point(253, 17)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(58, 39)
-        Button1.TabIndex = 16
-        Button1.TextAlign = ContentAlignment.BottomCenter
-        Button1.TextImageRelation = TextImageRelation.ImageAboveText
-        Button1.UseVisualStyleBackColor = True
-        ' 
         ' chkHabilitaCta
         ' 
         chkHabilitaCta.AutoSize = True
-        chkHabilitaCta.Location = New Point(291, 271)
+        chkHabilitaCta.Font = New Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point)
+        chkHabilitaCta.Location = New Point(558, 120)
         chkHabilitaCta.Name = "chkHabilitaCta"
-        chkHabilitaCta.Size = New Size(116, 19)
+        chkHabilitaCta.Size = New Size(147, 25)
         chkHabilitaCta.TabIndex = 17
         chkHabilitaCta.Text = "Habilitar Cta.Cte."
         chkHabilitaCta.UseVisualStyleBackColor = True
+        ' 
+        ' ComboRelacion
+        ' 
+        ComboRelacion.FormattingEnabled = True
+        ComboRelacion.Items.AddRange(New Object() {"CLIENTE", "PROVEEDOR"})
+        ComboRelacion.Location = New Point(315, 132)
+        ComboRelacion.Name = "ComboRelacion"
+        ComboRelacion.Size = New Size(179, 23)
+        ComboRelacion.TabIndex = 41
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(261, 140)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(52, 15)
+        Label8.TabIndex = 42
+        Label8.Text = "Relación"
+        ' 
+        ' GridClientes
+        ' 
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        GridClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        GridClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        GridClientes.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9})
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        GridClientes.DefaultCellStyle = DataGridViewCellStyle2
+        GridClientes.Location = New Point(5, 161)
+        GridClientes.Name = "GridClientes"
+        GridClientes.RowHeadersVisible = False
+        GridClientes.RowTemplate.Height = 25
+        GridClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        GridClientes.Size = New Size(739, 248)
+        GridClientes.TabIndex = 43
+        ' 
+        ' Column1
+        ' 
+        Column1.DataPropertyName = "id"
+        Column1.HeaderText = "Código"
+        Column1.Name = "Column1"
+        ' 
+        ' Column2
+        ' 
+        Column2.DataPropertyName = "apellido"
+        Column2.HeaderText = "Apellido"
+        Column2.Name = "Column2"
+        Column2.Width = 150
+        ' 
+        ' Column3
+        ' 
+        Column3.DataPropertyName = "nombre"
+        Column3.HeaderText = "Nombre"
+        Column3.Name = "Column3"
+        Column3.Width = 150
+        ' 
+        ' Column4
+        ' 
+        Column4.DataPropertyName = "direccion"
+        Column4.HeaderText = "Direccion"
+        Column4.Name = "Column4"
+        Column4.Width = 150
+        ' 
+        ' Column5
+        ' 
+        Column5.DataPropertyName = "cuit"
+        Column5.HeaderText = "Cuit"
+        Column5.Name = "Column5"
+        ' 
+        ' Column6
+        ' 
+        Column6.DataPropertyName = "telefono"
+        Column6.HeaderText = "Telefono"
+        Column6.Name = "Column6"
+        ' 
+        ' Column7
+        ' 
+        Column7.DataPropertyName = "estado"
+        Column7.HeaderText = "Estado"
+        Column7.Name = "Column7"
+        ' 
+        ' Column8
+        ' 
+        Column8.DataPropertyName = "relacion"
+        Column8.HeaderText = "Relacion"
+        Column8.Name = "Column8"
+        ' 
+        ' Column9
+        ' 
+        Column9.DataPropertyName = "habilita_cta"
+        Column9.HeaderText = "Cta.Cte."
+        Column9.Name = "Column9"
         ' 
         ' abm_clientes
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(424, 437)
+        ClientSize = New Size(750, 481)
         ControlBox = False
+        Controls.Add(GridClientes)
+        Controls.Add(ComboRelacion)
+        Controls.Add(Label8)
         Controls.Add(chkHabilitaCta)
-        Controls.Add(Button1)
         Controls.Add(Button5)
         Controls.Add(Button4)
         Controls.Add(Button3)
@@ -282,7 +389,8 @@ Partial Class abm_clientes
         Controls.Add(Label1)
         Name = "abm_clientes"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Alta, baja y modificación de clientes"
+        Text = "Alta, baja y modificación de clientes y proveedores"
+        CType(GridClientes, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -305,6 +413,17 @@ Partial Class abm_clientes
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents chkHabilitaCta As CheckBox
+    Friend WithEvents ComboRelacion As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents GridClientes As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
 End Class

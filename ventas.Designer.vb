@@ -32,7 +32,6 @@ Partial Class ventas
         Column3 = New DataGridViewTextBoxColumn()
         Column4 = New DataGridViewTextBoxColumn()
         Column5 = New DataGridViewTextBoxColumn()
-        Button2 = New Button()
         txCuit = New TextBox()
         Label5 = New Label()
         txDireccion = New TextBox()
@@ -147,15 +146,6 @@ Partial Class ventas
         ' 
         Column5.HeaderText = "TOTAL"
         Column5.Name = "Column5"
-        ' 
-        ' Button2
-        ' 
-        Button2.Font = New Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Button2.Location = New Point(393, 403)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(368, 35)
-        Button2.TabIndex = 13
-        Button2.UseVisualStyleBackColor = True
         ' 
         ' txCuit
         ' 
@@ -281,25 +271,26 @@ Partial Class ventas
         Button5.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
         Button5.ImageKey = "(ninguna)"
         Button5.ImageList = ImageList1
-        Button5.Location = New Point(72, 15)
+        Button5.Location = New Point(125, 37)
         Button5.Name = "Button5"
-        Button5.Size = New Size(49, 23)
+        Button5.Size = New Size(28, 23)
         Button5.TabIndex = 29
-        Button5.Text = "Buscar"
+        Button5.Text = "B"
         Button5.TextImageRelation = TextImageRelation.ImageAboveText
         Button5.UseVisualStyleBackColor = True
         ' 
         ' txTotal
         ' 
-        txTotal.Location = New Point(639, 37)
+        txTotal.Location = New Point(661, 37)
         txTotal.Name = "txTotal"
         txTotal.Size = New Size(89, 23)
         txTotal.TabIndex = 27
+        txTotal.TextAlign = HorizontalAlignment.Right
         ' 
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Location = New Point(640, 19)
+        Label11.Location = New Point(718, 19)
         Label11.Name = "Label11"
         Label11.Size = New Size(32, 15)
         Label11.TabIndex = 28
@@ -307,15 +298,16 @@ Partial Class ventas
         ' 
         ' txPUnit
         ' 
-        txPUnit.Location = New Point(536, 37)
+        txPUnit.Location = New Point(558, 37)
         txPUnit.Name = "txPUnit"
         txPUnit.Size = New Size(97, 23)
         txPUnit.TabIndex = 25
+        txPUnit.TextAlign = HorizontalAlignment.Right
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Location = New Point(537, 19)
+        Label10.Location = New Point(615, 19)
         Label10.Name = "Label10"
         Label10.Size = New Size(39, 15)
         Label10.TabIndex = 26
@@ -323,7 +315,7 @@ Partial Class ventas
         ' 
         ' txCant
         ' 
-        txCant.Location = New Point(465, 37)
+        txCant.Location = New Point(487, 37)
         txCant.Name = "txCant"
         txCant.Size = New Size(65, 23)
         txCant.TabIndex = 23
@@ -331,7 +323,7 @@ Partial Class ventas
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(466, 19)
+        Label9.Location = New Point(488, 19)
         Label9.Name = "Label9"
         Label9.Size = New Size(35, 15)
         Label9.TabIndex = 24
@@ -339,15 +331,15 @@ Partial Class ventas
         ' 
         ' txDescripcion
         ' 
-        txDescripcion.Location = New Point(126, 37)
+        txDescripcion.Location = New Point(156, 37)
         txDescripcion.Name = "txDescripcion"
-        txDescripcion.Size = New Size(333, 23)
+        txDescripcion.Size = New Size(325, 23)
         txDescripcion.TabIndex = 21
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Location = New Point(127, 19)
+        Label8.Location = New Point(156, 19)
         Label8.Name = "Label8"
         Label8.Size = New Size(69, 15)
         Label8.TabIndex = 22
@@ -413,18 +405,20 @@ Partial Class ventas
         ' txNFact
         ' 
         txNFact.Font = New Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txNFact.Location = New Point(611, 1)
+        txNFact.Location = New Point(665, 1)
         txNFact.Name = "txNFact"
-        txNFact.Size = New Size(140, 26)
+        txNFact.Size = New Size(86, 26)
         txNFact.TabIndex = 31
         txNFact.UseVisualStyleBackColor = True
         ' 
         ' txTotalFact
         ' 
-        txTotalFact.Location = New Point(271, 415)
+        txTotalFact.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        txTotalFact.Location = New Point(584, 413)
         txTotalFact.Name = "txTotalFact"
-        txTotalFact.Size = New Size(89, 23)
+        txTotalFact.Size = New Size(172, 33)
         txTotalFact.TabIndex = 32
+        txTotalFact.TextAlign = HorizontalAlignment.Right
         ' 
         ' ventas
         ' 
@@ -450,7 +444,6 @@ Partial Class ventas
         Controls.Add(Label2)
         Controls.Add(txCodigo)
         Controls.Add(Label1)
-        Controls.Add(Button2)
         Controls.Add(TablaDetalle)
         Controls.Add(Button3)
         Name = "ventas"
@@ -466,7 +459,6 @@ Partial Class ventas
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents Button3 As Button
     Friend WithEvents TablaDetalle As DataGridView
-    Friend WithEvents Button2 As Button
     Friend WithEvents txCuit As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txDireccion As TextBox
@@ -497,8 +489,8 @@ Partial Class ventas
     Friend WithEvents Label6 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents txNFact As Button
     Friend WithEvents txTotalFact As TextBox
+    Friend WithEvents Button5 As Button
 End Class

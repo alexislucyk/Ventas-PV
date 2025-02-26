@@ -51,5 +51,8 @@ Public Class Form1
         compras.Show()
     End Sub
 
-
+    Private Sub ConsultaDeCtaCteClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultaDeCtaCteClientesToolStripMenuItem.Click
+        consulta_ctacte.MdiParent = Me
+        consulta_ctacte.Show()
+    End Sub
 End Class

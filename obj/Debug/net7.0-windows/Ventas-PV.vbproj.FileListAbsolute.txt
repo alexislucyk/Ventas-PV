@@ -55,3 +55,4 @@ C:\Dev\ventas\Ventas-PV\obj\Debug\net7.0-windows\Ventas_PV.abm_rubros_prod.resou
 C:\Dev\ventas\Ventas-PV\obj\Debug\net7.0-windows\Ventas_PV.compras.resources
 C:\Dev\ventas\Ventas-PV\obj\Debug\net7.0-windows\Ventas-PV.sourcelink.json
 C:\Dev\ventas\Ventas-PV\obj\Debug\net7.0-windows\Ventas_PV.consulta_compras.resources
+C:\Dev\ventas\Ventas-PV\obj\Debug\net7.0-windows\Ventas_PV.consulta_ctacte.resources

@@ -12,7 +12,10 @@ Module conexiones
     Public AdapClie As MySqlDataAdapter
     Public AdapConsClie As MySqlDataAdapter
     Public AdapArticFact As MySqlDataAdapter
+    Public Consql As String
     Public DT As DataTable
+    Public DA As MySqlDataAdapter
+    Public Bind As New BindingSource
     Public DtArtic As DataTable
     Public DtClientes As DataTable
     Public DatosProvee As DataSet
@@ -20,6 +23,7 @@ Module conexiones
     Public DatosConsArtic As DataSet
     Public DatosConsclie As DataSet
     Public EstadoRegistro As String
+    Public EstadoRegistroProv As String
     Public Actualizar As String
     Public Borrado As String
     Public BindNClie As New BindingSource
@@ -33,6 +37,7 @@ Module conexiones
     Public TotalCompra As Double
     Public TotalVenta As Double
     Public IP_SERVER As String
+    Public TieneCtaCte As String
 
     Public Sub ConectarDB()
         Dim fileReader As String
@@ -56,5 +61,12 @@ Module conexiones
         ComboRubros.DisplayMember = "nombre"
         ComboRubros.Text = ""
     End Sub
+    Public Sub HabilitarCTACTE(ChkBOX As CheckBox)
+        If ChkBOX.Checked = True Then
+            TieneCtaCte = "SI"
+        ElseIf ChkBOX.Checked = False Then
+            TieneCtaCte = "NO"
+        End If
 
+    End Sub
 End Module

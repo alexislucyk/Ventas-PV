@@ -39,9 +39,6 @@ Partial Class Form1
         IngresarNuevoClienteToolStripMenuItem = New ToolStripMenuItem()
         ConsultaDeClientesToolStripMenuItem = New ToolStripMenuItem()
         ConsultaDeCtaCteClientesToolStripMenuItem = New ToolStripMenuItem()
-        ProveedoresToolStripMenuItem = New ToolStripMenuItem()
-        IngresarNuevoProveedorToolStripMenuItem = New ToolStripMenuItem()
-        ConsultaDeProveedoresToolStripMenuItem = New ToolStripMenuItem()
         ComprasToolStripMenuItem = New ToolStripMenuItem()
         IngresoDeMercaderíaToolStripMenuItem = New ToolStripMenuItem()
         ConsultaDeIngresosToolStripMenuItem = New ToolStripMenuItem()
@@ -170,7 +167,7 @@ Partial Class Form1
         ' 
         ' OperacionesToolStripMenuItem
         ' 
-        OperacionesToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ClientesToolStripMenuItem, ProveedoresToolStripMenuItem, ComprasToolStripMenuItem, VentasToolStripMenuItem, ProductosToolStripMenuItem})
+        OperacionesToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ClientesToolStripMenuItem, ComprasToolStripMenuItem, VentasToolStripMenuItem, ProductosToolStripMenuItem})
         OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
         OperacionesToolStripMenuItem.Size = New Size(85, 20)
         OperacionesToolStripMenuItem.Text = "Operaciones"
@@ -179,20 +176,20 @@ Partial Class Form1
         ' 
         ClientesToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {IngresarNuevoClienteToolStripMenuItem, ConsultaDeClientesToolStripMenuItem, ConsultaDeCtaCteClientesToolStripMenuItem})
         ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        ClientesToolStripMenuItem.Size = New Size(139, 22)
-        ClientesToolStripMenuItem.Text = "Clientes"
+        ClientesToolStripMenuItem.Size = New Size(192, 22)
+        ClientesToolStripMenuItem.Text = "Clientes / Proveedores"
         ' 
         ' IngresarNuevoClienteToolStripMenuItem
         ' 
         IngresarNuevoClienteToolStripMenuItem.Name = "IngresarNuevoClienteToolStripMenuItem"
         IngresarNuevoClienteToolStripMenuItem.Size = New Size(224, 22)
-        IngresarNuevoClienteToolStripMenuItem.Text = "Ingresar nuevo cliente"
+        IngresarNuevoClienteToolStripMenuItem.Text = "Nuevo Cliente/Proveedor"
         ' 
         ' ConsultaDeClientesToolStripMenuItem
         ' 
         ConsultaDeClientesToolStripMenuItem.Name = "ConsultaDeClientesToolStripMenuItem"
         ConsultaDeClientesToolStripMenuItem.Size = New Size(224, 22)
-        ConsultaDeClientesToolStripMenuItem.Text = "Consulta de clientes"
+        ConsultaDeClientesToolStripMenuItem.Text = "Consulta de Clientes"
         ' 
         ' ConsultaDeCtaCteClientesToolStripMenuItem
         ' 
@@ -200,30 +197,11 @@ Partial Class Form1
         ConsultaDeCtaCteClientesToolStripMenuItem.Size = New Size(224, 22)
         ConsultaDeCtaCteClientesToolStripMenuItem.Text = "Consulta de Cta.Cte Clientes"
         ' 
-        ' ProveedoresToolStripMenuItem
-        ' 
-        ProveedoresToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {IngresarNuevoProveedorToolStripMenuItem, ConsultaDeProveedoresToolStripMenuItem})
-        ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        ProveedoresToolStripMenuItem.Size = New Size(139, 22)
-        ProveedoresToolStripMenuItem.Text = "Proveedores"
-        ' 
-        ' IngresarNuevoProveedorToolStripMenuItem
-        ' 
-        IngresarNuevoProveedorToolStripMenuItem.Name = "IngresarNuevoProveedorToolStripMenuItem"
-        IngresarNuevoProveedorToolStripMenuItem.Size = New Size(209, 22)
-        IngresarNuevoProveedorToolStripMenuItem.Text = "Ingresar nuevo proveedor"
-        ' 
-        ' ConsultaDeProveedoresToolStripMenuItem
-        ' 
-        ConsultaDeProveedoresToolStripMenuItem.Name = "ConsultaDeProveedoresToolStripMenuItem"
-        ConsultaDeProveedoresToolStripMenuItem.Size = New Size(209, 22)
-        ConsultaDeProveedoresToolStripMenuItem.Text = "Consulta de proveedores"
-        ' 
         ' ComprasToolStripMenuItem
         ' 
         ComprasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {IngresoDeMercaderíaToolStripMenuItem, ConsultaDeIngresosToolStripMenuItem})
         ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
-        ComprasToolStripMenuItem.Size = New Size(139, 22)
+        ComprasToolStripMenuItem.Size = New Size(192, 22)
         ComprasToolStripMenuItem.Text = "Compras"
         ' 
         ' IngresoDeMercaderíaToolStripMenuItem
@@ -242,7 +220,7 @@ Partial Class Form1
         ' 
         VentasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {NuevaVentaToolStripMenuItem, ConsultaDeVentasToolStripMenuItem})
         VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        VentasToolStripMenuItem.Size = New Size(139, 22)
+        VentasToolStripMenuItem.Size = New Size(192, 22)
         VentasToolStripMenuItem.Text = "Ventas"
         ' 
         ' NuevaVentaToolStripMenuItem
@@ -261,7 +239,7 @@ Partial Class Form1
         ' 
         ProductosToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ABMProductosToolStripMenuItem, ABMRubrosDeProductosToolStripMenuItem})
         ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        ProductosToolStripMenuItem.Size = New Size(139, 22)
+        ProductosToolStripMenuItem.Size = New Size(192, 22)
         ProductosToolStripMenuItem.Text = "Productos"
         ' 
         ' ABMProductosToolStripMenuItem
@@ -307,9 +285,6 @@ Partial Class Form1
     Friend WithEvents IngresarNuevoClienteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultaDeClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultaDeCtaCteClientesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents IngresarNuevoProveedorToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ConsultaDeProveedoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ComprasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents IngresoDeMercaderíaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultaDeIngresosToolStripMenuItem As ToolStripMenuItem
